@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @userlog.user %>
+</p>
+
+<p>
+  <b>Comp:</b>
+  <%= @userlog.comp %>
+</p>
+
+<p>
+  <b>In:</b>
+  <%= @userlog.in %>
+</p>
+
+
+<%= link_to 'Edit', edit_userlog_path(@userlog) %> |
+<%= link_to 'Back', userlogs_path %>

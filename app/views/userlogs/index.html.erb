@@ -1,0 +1,27 @@
+<h1>Listing userlogs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Comp</th>
+    <th>In</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @userlogs.each do |userlog| %>
+  <tr>
+    <td><%= userlog.user %></td>
+    <td><%= userlog.comp %></td>
+    <td><%= userlog.in %></td>
+    <td><%= link_to 'Show', userlog %></td>
+    <td><%= link_to 'Edit', edit_userlog_path(userlog) %></td>
+    <td><%= link_to 'Destroy', userlog, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Userlog', new_userlog_path %>

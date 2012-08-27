@@ -1,4 +1,6 @@
 Portal::Application.routes.draw do
+  resources :userlogs
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

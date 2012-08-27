@@ -1,0 +1,29 @@
+<%= form_for(@userlog) do |f| %>
+  <% if @userlog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@userlog.errors.count, "error") %> prohibited this userlog from being saved:</h2>
+
+      <ul>
+      <% @userlog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :comp %><br />
+    <%= f.text_field :comp %>
+  </div>
+  <div class="field">
+    <%= f.label :in %><br />
+    <%= f.check_box :in %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
