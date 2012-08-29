@@ -1,4 +1,6 @@
 Portal::Application.routes.draw do
+  get "user/index"
+
   resources :userlogs
 
   # The priority is based upon order of creation:
