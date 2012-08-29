@@ -10,12 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120827082301) do
+ActiveRecord::Schema.define(:version => 20120829022001) do
+
+  create_table "comps", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "userlogs", :force => true do |t|
-    t.string   "user"
-    t.string   "comp"
+    t.integer  "user_id"
+    t.integer  "comp_id"
     t.boolean  "in"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

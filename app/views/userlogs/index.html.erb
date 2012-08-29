@@ -12,8 +12,8 @@
 
 <% @userlogs.each do |userlog| %>
   <tr>
-    <td><%= userlog.user %></td>
-    <td><%= userlog.comp %></td>
+    <td><%= userlog.user_name %></td>
+    <td><%= userlog.comp_name %></td>
     <td><%= userlog.in %></td>
     <td><%= link_to 'Show', userlog %></td>
     <td><%= link_to 'Edit', edit_userlog_path(userlog) %></td>

@@ -1,8 +1,8 @@
 class CreateUserlogs < ActiveRecord::Migration
   def change
     create_table :userlogs do |t|
-      t.string :user
-      t.string :comp
+      t.integer :user_id
+      t.integer :comp_id
       t.boolean :in
 
       t.timestamps

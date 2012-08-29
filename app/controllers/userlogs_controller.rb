@@ -41,11 +41,10 @@ class UserlogsController < ApplicationController
   # POST /userlogs
   # POST /userlogs.json
   def create
-    user = params[:user].to_s
-    comp = params[:comp].to_s
+    user_name = params[:user].to_s
+    comp_name = params[:comp].to_s
     inout = params[:in].to_i
-    @userlog = Userlog.new(:user=> user, :comp => comp, :in => inout)
-    logger.debug "params #{@user}"
+    @userlog = Userlog.new(:user_name=> user_name, :comp_name => comp_name, :in => inout)
     respond_to do |format|
       if @userlog.save
         format.html { redirect_to @userlog, :notice => 'Userlog was successfully created.' }
