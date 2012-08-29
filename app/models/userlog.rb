@@ -1,5 +1,5 @@
 class Userlog < ActiveRecord::Base
-  attr_accessible :comp_id, :in, :user_id , :user_name, :comp_name
+  attr_accessible :comp_id, :in, :user_id , :user_name, :comp_name, :created_at
   belongs_to :comp
   belongs_to :user
 

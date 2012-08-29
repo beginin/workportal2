@@ -1,0 +1,21 @@
+<p>
+  <b>User:</b>
+  <%= @user.name %>
+</p>
+
+
+<table>
+  <tr>
+    <th>Компьютер</th>
+  </tr>
+
+<% @user.userlog.each do |u| %>
+  <tr>
+    <td><%= u.comp_name %></td>
+    <td><%= u.in %></td>
+    <td><%= u.created_at %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Back', user_path %>

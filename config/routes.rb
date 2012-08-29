@@ -1,8 +1,9 @@
 Portal::Application.routes.draw do
-  get "user/index"
+  #get "user/index"
 
   resources :userlogs
-
+  match 'user' 		=> 'user#index'
+  match 'user/:id' 	=> 'user#show', :as => :userid
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
