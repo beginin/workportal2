@@ -1,2 +1,21 @@
-<h1>Comps#show</h1>
-<p>Find me in app/views/comps/show.html.erb</p>
+<p>
+  <b>Comp:</b>
+  <%= @comp.name %>
+</p>
+
+
+<table>
+  <tr>
+    <th>Пользователи</th>
+  </tr>
+
+<% @comp.userlog.each do |u| %>
+  <tr>
+    <td><%= u.user_name %></td>
+    <td><%= u.in %></td>
+    <td><%= u.created_at %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Back', user_path %>

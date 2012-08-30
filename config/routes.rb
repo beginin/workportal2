@@ -8,6 +8,8 @@ Portal::Application.routes.draw do
   resources :userlogs
   match 'user' 		=> 'user#index'
   match 'user/:id' 	=> 'user#show', :as => :userid
+  match 'comps'		=> 'comps#index'
+  match 'comps/:id'	=> 'comps#show', :as => :comp
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
