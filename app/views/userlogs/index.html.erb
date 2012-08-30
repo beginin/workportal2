@@ -2,6 +2,7 @@
 
 <%= will_paginate @posts %>
 
+
 <table>
   <tr>
     <th>User</th>
@@ -17,6 +18,7 @@
     <td><%= userlog.user_name %></td>
     <td><%= userlog.comp_name %></td>
     <td><%= userlog.in %></td>
+    <td><%= userlog.created_at.to_formatted_s(:short) %></td>
     <td><%= link_to 'Show', userlog %></td>
     <td><%= link_to 'Edit', edit_userlog_path(userlog) %></td>
     <td><%= link_to 'Destroy', userlog, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>

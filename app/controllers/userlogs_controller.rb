@@ -3,7 +3,7 @@ class UserlogsController < ApplicationController
   # GET /userlogs.json
   skip_before_filter :verify_authenticity_token
   def index
-    @userlogs = Userlog.paginate(:page => params[:page], :per_page => 10)
+    @userlogs = Userlog.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # index.html.erb
