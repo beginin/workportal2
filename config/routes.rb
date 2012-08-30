@@ -1,4 +1,8 @@
 Portal::Application.routes.draw do
+  get "comps/index"
+
+  get "comps/show"
+
   #get "user/index"
 
   resources :userlogs
