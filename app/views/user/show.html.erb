@@ -13,7 +13,7 @@
   <tr>
     <td><%= u.comp_name %></td>
     <td><%= u.in %></td>
-    <td><%= u.created_at %></td>
+    <td><%= u.created_at.to_formatted_s(:short) %></td>
   </tr>
 <% end %>
 </table>
