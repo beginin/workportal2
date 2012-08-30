@@ -1,6 +1,6 @@
 class UserController < ApplicationController
   def index
-    @user= User.all
+    @user= User.find(:all, :order => "created_at ASC")
   end
 
   def show
