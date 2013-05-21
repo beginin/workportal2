@@ -11,7 +11,7 @@
 
 <% @comp.sortuserlog.each do |u| %>
   <tr>
-    <td><%= u.user_name %></td>
+    <td><%= link_to u.user_name, u.user %></td>
     <td><%= u.in %></td>
     <td><%= u.created_at.to_formatted_s(:short) %></td>
   </tr>

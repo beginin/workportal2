@@ -9,9 +9,9 @@
 
 <% @comps.each do |comp| %>
   <tr>
-    <td><%= comp.name %></td>
-    <td><%= comp.sortuserlog.last.user_name %></td>
-    <td><%= link_to 'Show', comp %></td>
+    <td><%= link_to comp.name, comp %></td>
+    <td><%= link_to comp.sortuserlog.last.user_name, comp.sortuserlog.last.user  %></td>
+    
 
   </tr>
 <% end %>
