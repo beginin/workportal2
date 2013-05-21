@@ -3,12 +3,14 @@
 <table>
   <tr>
     <th>User</th>
+    <th>Last comp</th>
     <th>User</th>
   </tr>
 
 <% @user.each do |u| %>
   <tr>
     <td><%= u.name %></td>
+    <td><%= u.sortuserlog.last.comp_name %></td>
     <td><%= link_to 'Show', userid_path(u) %></td>
 
   </tr>
