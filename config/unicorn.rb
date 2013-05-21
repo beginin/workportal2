@@ -1,11 +1,11 @@
 
-root = "/home/deployer/apps/workportal2/current"
+root = "/home/loginout/workportal2"
 working_directory root
-pid "#{root}/tmp/pids/unicorn.pid"
-stderr_path "#{root}/log/unicorn.log"
-stdout_path "#{root}/log/unicorn.log"
+pid "#{root}/tmp/pids/unicorn_loginout.pid"
+stderr_path "#{root}/log/unicorn_loginout.log"
+stdout_path "#{root}/log/unicorn_loginout.log"
 
-listen "/tmp/unicorn.workportal2.sock"
+listen "/tmp/unicorn.loginout.sock"
 worker_processes 2
 timeout 30
 
