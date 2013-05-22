@@ -10,7 +10,7 @@
 <% @user.each do |u| %>
   <tr>
     <td><%= link_to u.name, userid_path(u) %></td>
-    <td><%= link_to u.sortuserlog.last.comp_name,u.sortuserlog.last.comp %></td>
+    <td><%= link_to u.userlog.last.comp_name,u.userlog.last.comp %></td>
 
 
   </tr>
